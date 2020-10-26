@@ -6,8 +6,8 @@
  mvn clean install -DskipTests
  
  --> ejecturar
- 
- java -jar target\jee-7-1.0-SNAPSHOT.jar
+
+java -jar target/jee-7-1.0-SNAPSHOT.jar
  
  
  TEST
