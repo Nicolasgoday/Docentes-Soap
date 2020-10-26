@@ -47,6 +47,10 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                     System.out.print("MTARIA ------" + m.getId());    
                 }
                 
+                
+                //CIERRO CONEXION
+                DataSource.closeConnection();
+                
     	} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
