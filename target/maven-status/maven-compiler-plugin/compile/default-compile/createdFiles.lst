@@ -1,0 +1,15 @@
+com\docentes\dao\MateriasDao.class
+com\docentes\dao\MateriasDao$MateriasRowMapper.class
+com\baeldung\jaxws\client\Employee.class
+com\baeldung\jaxws\client\EmployeeServiceImpl.class
+com\baeldung\jaxws\client\EmployeeService.class
+com\docentes\dao\ApplicationContext.class
+com\docentes\dao\Materias.class
+com\baeldung\jaxws\server\repository\DataSource.class
+com\baeldung\jaxws\wsdl\com\baeldung\jaxws\server\topdown\EmployeeServiceTopDown_Service.class
+com\baeldung\jaxws\server\repository\EmployeeRepositoryImpl.class
+com\baeldung\jaxws\wsdl\com\baeldung\jaxws\server\topdown\ObjectFactory.class
+com\baeldung\jaxws\client\EmployeeServicePublisher.class
+com\docentes\dao\MateriasDao$1.class
+com\baeldung\jaxws\server\repository\EmployeeRepository.class
+com\baeldung\jaxws\wsdl\com\baeldung\jaxws\server\topdown\EmployeeServiceTopDown.class
