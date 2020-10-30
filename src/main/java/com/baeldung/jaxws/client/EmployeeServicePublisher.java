@@ -6,14 +6,14 @@ public class EmployeeServicePublisher {
     public static void main(String[] args) {
     	 
     	/* PARA SUBOIR VA ASI*/
-    	/*********************
+    	
     	String port = System.getenv("PORT");
-         String host = "http://0.0.0.0:";
-         *********************************/
-    	/* PARA local VA ASI*/
+         String host = System.getenv("HOST_SOAP"); //"http://0.0.0.0:";
+        /* *********************************/
+    	/* PARA local VA ASI
     	String port = "8080";
          String host = "http://localhost:";
-         
+         */
     	
        // String uri = "/employeeservice";
            //"http://0.0.0.0:8080/employeeservice", Endpoint.publish(, service);
