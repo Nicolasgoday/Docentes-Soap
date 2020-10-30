@@ -20,7 +20,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import com.baeldung.jaxws.client.AlumnoExamenFinal;
+import com.docentes.model.AlumnoExamenFinal;
 
 @Repository
 public class AlumnosExamenFinalDao {

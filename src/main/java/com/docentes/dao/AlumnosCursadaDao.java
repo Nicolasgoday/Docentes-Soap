@@ -20,7 +20,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import com.baeldung.jaxws.client.AlumnoCursada;
+import com.docentes.model.AlumnoCursada;
 
 @Repository
 public class AlumnosCursadaDao {
@@ -84,6 +84,17 @@ public class AlumnosCursadaDao {
     public AlumnoCursada findById(Long id) {
         return jdbcTemplate.queryForObject("SELECT * FROM AlumnoCursada WHERE idalumnosCursada = ?",
                 new Object[] { id }, new AlumnoCursadaRowMapper());
+    }
+    
+    public List<AlumnoCursada> findByPorDocenteYMateria(int idDocente, int idMateria) {
+    	
+	   String SQL_QUERY ="SELECT idalumnosCursada,datosAlumno,notaCursada, alumnoscursada.MateriasIdMaterias  FROM inscripciones.alumnoscursada " + 
+    		   		"inner join curso on alumnoscursada.MateriasIdMaterias = curso.MateriasIdMaterias " + 
+    		   		"where alumnoscursada.MateriasIdMaterias = ? and JSON_UNQUOTE(datosDocente->\"$.id\") = ? " ;
+    	
+	   System.out.print(SQL_QUERY);
+       return jdbcTemplate.query(SQL_QUERY,
+                new Object[] { idMateria, idDocente }, new AlumnoCursadaRowMapper());
     }
 
     public int count() {

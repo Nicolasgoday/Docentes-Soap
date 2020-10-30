@@ -62,7 +62,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.baeldung.jaxws.client.EmployeeServicePublisher</mainClass>
+              <mainClass>com.docentes.jaxws.client.DocentesServicePublisher</mainClass>
               <addClasspath>true</addClasspath>
             </manifest>
           </archive>
@@ -82,7 +82,7 @@
         <configuration>
           <transformers>
             <transformer>
-              <mainClass>com.baeldung.jaxws.client.EmployeeServicePublisher</mainClass>
+              <mainClass>com.docentes.jaxws.client.DocentesServicePublisher</mainClass>
             </transformer>
           </transformers>
           <filters>
