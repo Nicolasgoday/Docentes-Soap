@@ -3,6 +3,8 @@
 ######################
 /target/classes/static/**
 
+!/target/docentesoap-v0.0.1.jar
+
 ######################
 # Eclipse
 ######################
@@ -25,6 +27,6 @@ local.properties
 .vscode/
 
 ######################
-# Package Files
+# Others
 ######################
-*.jar
+*.class
