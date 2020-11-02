@@ -575,6 +575,22 @@
                     <version>${arquillian-glassfish.version}</version>
                     <scope>test</scope>
                 </dependency>
+            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.2.0</version>
+</dependency>
+            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-root -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-root</artifactId>
+    <version>0.11.2</version>
+    <type>pom</type>
+</dependency>
+            
+								
+				                
             </dependencies>
         </profile>
         <profile>

@@ -2,6 +2,12 @@ package com.docentes.jaxws.client;
 
 import javax.xml.ws.Endpoint;
 
+import org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+
+import com.sun.research.ws.wadl.Request;
+
 public class DocentesServicePublisher {
     public static void main(String[] args) {
     	 
@@ -21,6 +27,14 @@ public class DocentesServicePublisher {
 //       Endpoint.publish(host + port + uri ,
   //        new EmployeeServiceImpl());
          
+        HttpHeaders headers = new HttpHeaders();
+
+        HttpEntity request = new HttpEntity(headers);
+
+        request.getBody();
+        System.out.println(request.getBody());
+
+        
          String uri = "/docentesSoap";
          Endpoint.publish(host + port + uri ,
                  new DocentesServiceSoapImpl());
