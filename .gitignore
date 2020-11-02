@@ -1,0 +1,30 @@
+######################
+# Project Specific
+######################
+/target/classes/static/**
+
+######################
+# Eclipse
+######################
+*.pydevproject
+.project
+.metadata
+tmp/
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+
+######################
+# Visual Studio Code
+######################
+.vscode/
+
+######################
+# Package Files
+######################
+*.jar
