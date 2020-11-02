@@ -1,0 +1,15 @@
+version: '2'
+services:
+    docentesoap:
+        build: .
+        image: docentesoap
+        environment:
+            - PORT=8081
+            - HOST_SOAP=http://0.0.0.0
+            - JDBC_DATABASE_URL=jdbc:mysql://127.0.0.1:3306/inscripciones?autoReconnect=true&useSSL=false
+            - JDBC_USER=plataforma
+            - JDBC_PASSWORD=plataforma
+        ports:
+            - "8081:8081"   
+        
+                        
