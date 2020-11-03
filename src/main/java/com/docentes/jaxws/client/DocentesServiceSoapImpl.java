@@ -18,7 +18,6 @@ public class DocentesServiceSoapImpl {
     private DocenteRepositoryImpl docenteRepositoryImpl;
 	 
 	 public DocentesServiceSoapImpl() {
-			super();
 			this.docenteRepositoryImpl = new DocenteRepositoryImpl();
 		}
 	 

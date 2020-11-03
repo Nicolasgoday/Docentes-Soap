@@ -34,7 +34,7 @@ public class DocentesServicePublisher {
         request.getBody();
         System.out.println(request.getBody());
 
-        
+        System.out.print(System.getenv("JDBC_DATABASE_URL"));
          String uri = "/docentesSoap";
          Endpoint.publish(host + ":" + port + uri ,
                  new DocentesServiceSoapImpl());
