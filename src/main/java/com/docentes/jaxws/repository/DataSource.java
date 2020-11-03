@@ -28,14 +28,14 @@ public class DataSource {
     	String jdbcPassword = System.getenv("JDBC_PASSWORD");
     	String jdbcUser = System.getenv("JDBC_USER");    	
     	
-    	
+    	config.setMaximumPoolSize(5);
     	config.setJdbcUrl( jdbcConnectionString );
         config.setUsername( jdbcUser );
         config.setPassword( jdbcPassword );
         config.addDataSourceProperty( "cachePrepStmts" , "true" );
         config.addDataSourceProperty( "prepStmtCacheSize" , "250" );
         config.addDataSourceProperty( "prepStmtCacheSqlLimit" , "2048" );
-   
+        
         
    
         ds = new HikariDataSource( config );
