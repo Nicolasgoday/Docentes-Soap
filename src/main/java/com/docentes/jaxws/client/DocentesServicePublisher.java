@@ -36,7 +36,7 @@ public class DocentesServicePublisher {
 
         
          String uri = "/docentesSoap";
-         Endpoint.publish(host + port + uri ,
+         Endpoint.publish(host + ":" + port + uri ,
                  new DocentesServiceSoapImpl());
     }
 }
