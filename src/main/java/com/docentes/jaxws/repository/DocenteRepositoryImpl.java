@@ -22,10 +22,18 @@ import com.docentes.model.AlumnoExamenFinal;
 import com.docentes.model.Materia;
 
 public class DocenteRepositoryImpl implements DocenteRepository {
+	
+   public JdbcTemplate jdbcTemplate;
+   
+     
+   public DocenteRepositoryImpl() {
+	super();
+	this.jdbcTemplate = new JdbcTemplate(DataSource.getDataSource());
+}
 
-   public List<Materia> traerMaterias(int idDocente){
+public List<Materia> traerMaterias(int idDocente){
 	   
-	   MateriasDao daoMaterias = new MateriasDao(new JdbcTemplate(DataSource.getDataSource()));
+	   MateriasDao daoMaterias = new MateriasDao(this.jdbcTemplate);
 	   
 	   List<Materia> listaMat = null;
 	   try {
@@ -70,7 +78,7 @@ public class DocenteRepositoryImpl implements DocenteRepository {
 public List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria){
 	//idalumnosCursada, datosAlumno, notaCursada, MateriasIdMaterias, recordatorio, createdAt, updatedAt
 
-	AlumnosCursadaDao daoCursadas= new AlumnosCursadaDao(new JdbcTemplate(DataSource.getDataSource()));
+	AlumnosCursadaDao daoCursadas= new AlumnosCursadaDao(this.jdbcTemplate);
 	   
 	   List<AlumnoCursada> listaCursadas = null;
 	   try {
@@ -122,7 +130,7 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
 	
 	boolean resultado = false;
 	
-	AlumnosCursadaDao daoAlumnoCursada = new AlumnosCursadaDao(new JdbcTemplate(DataSource.getDataSource()));
+	AlumnosCursadaDao daoAlumnoCursada = new AlumnosCursadaDao(this.jdbcTemplate);
 	//updateNotaAlumnoCursada
 	   
    Iterator<AlumnoCursada> itAlumnos = alumnosConNotas.iterator();
@@ -148,7 +156,7 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
     public boolean cargaNotasFinales(int idDocente, int idMateria, List<AlumnoExamenFinal> alumnosConNotas){
     	boolean resultado = false;
     	
-    	AlumnosExamenFinalDao daoAlumnoExamen = new AlumnosExamenFinalDao(new JdbcTemplate(DataSource.getDataSource()));
+    	AlumnosExamenFinalDao daoAlumnoExamen = new AlumnosExamenFinalDao(this.jdbcTemplate);
     	//updateNotaAlumnoCursada
     	   
        Iterator<AlumnoExamenFinal> itAlumnos = alumnosConNotas.iterator();

@@ -31,6 +31,13 @@
     </dependencyManagement>
 
     <dependencies>
+    <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.9.1</version>
+</dependency>
+    
  <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 <dependency>
@@ -178,12 +185,6 @@
  
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
- 
-        <dependency>
-            <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${spring.version}</version>
         </dependency>
@@ -192,11 +193,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+
 		  <!-- testing -->
         <dependency>
             <groupId>junit</groupId>
@@ -395,12 +392,7 @@
         <version>1.1.4.Final</version>
         <scope>test</scope>
 </dependency>
-                <dependency>
-                    <groupId>io.undertow</groupId>
-                    <artifactId>undertow-websockets-jsr</artifactId>
-                    <version>${undertow-websockets-jsr.version}</version>
-                    <scope>test</scope>
-                </dependency>
+               
                 <dependency>
                     <groupId>org.jboss.resteasy</groupId>
                     <artifactId>resteasy-client</artifactId>
@@ -451,12 +443,7 @@
         <profile>
             <id>wildfly-remote-arquillian</id>
             <dependencies>
-                <dependency>
-                    <groupId>io.undertow</groupId>
-                    <artifactId>undertow-websockets-jsr</artifactId>
-                    <version>${undertow-websockets-jsr.version}</version>
-                    <scope>test</scope>
-                </dependency>
+              
                 <dependency>
                     <groupId>org.jboss.resteasy</groupId>
                     <artifactId>resteasy-client</artifactId>
@@ -575,21 +562,7 @@
                     <version>${arquillian-glassfish.version}</version>
                     <scope>test</scope>
                 </dependency>
-            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt</artifactId>
-    <version>0.2.0</version>
-</dependency>
-            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-root -->
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-root</artifactId>
-    <version>0.11.2</version>
-    <type>pom</type>
-</dependency>
-            
-								
+
 				                
             </dependencies>
         </profile>

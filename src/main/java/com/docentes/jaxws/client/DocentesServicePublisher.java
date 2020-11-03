@@ -2,7 +2,7 @@ package com.docentes.jaxws.client;
 
 import javax.xml.ws.Endpoint;
 
-import org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 

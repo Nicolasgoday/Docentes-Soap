@@ -14,6 +14,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -57,7 +58,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 	 * Metodo para autenticarnos dentro del flujo de Spring
 	 * 
 	 * @param claims
-	 */
+	 */ 	
 	private void setUpSpringAuthentication(Claims claims) {
 		@SuppressWarnings("unchecked")
 		List<String> authorities = (List) claims.get("authorities");
