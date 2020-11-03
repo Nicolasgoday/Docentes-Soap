@@ -13,6 +13,7 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.*;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import com.docentes.dao.AlumnosCursadaDao;
 import com.docentes.dao.AlumnosExamenFinalDao;
@@ -21,11 +22,22 @@ import com.docentes.model.AlumnoCursada;
 import com.docentes.model.AlumnoExamenFinal;
 import com.docentes.model.Materia;
 
+@Service
 public class DocenteRepositoryImpl implements DocenteRepository {
 
-   public List<Materia> traerMaterias(int idDocente){
+	
+   private MateriasDao daoMaterias = new MateriasDao();
+
+   
+   private AlumnosCursadaDao daoCursadas = new AlumnosCursadaDao();
+
+   
+   private  AlumnosExamenFinalDao daoAlumnosExamenFinalDao = new AlumnosExamenFinalDao();
+   
+    
+
+public List<Materia> traerMaterias(int idDocente){
 	   
-	   MateriasDao daoMaterias = new MateriasDao(new JdbcTemplate(DataSource.getDataSource()));
 	   
 	   List<Materia> listaMat = null;
 	   try {
@@ -68,9 +80,7 @@ public class DocenteRepositoryImpl implements DocenteRepository {
 }
 
 public List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria){
-	//idalumnosCursada, datosAlumno, notaCursada, MateriasIdMaterias, recordatorio, createdAt, updatedAt
-
-	AlumnosCursadaDao daoCursadas= new AlumnosCursadaDao(new JdbcTemplate(DataSource.getDataSource()));
+	//idalumnosCursada, datosAlumno, notaCursada, MateriasIdMaterias, recordatorio, createdAt, updatedAt	
 	   
 	   List<AlumnoCursada> listaCursadas = null;
 	   try {
@@ -120,9 +130,8 @@ public List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria
 
 public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursada> alumnosConNotas){
 	
-	boolean resultado = false;
-	
-	AlumnosCursadaDao daoAlumnoCursada = new AlumnosCursadaDao(new JdbcTemplate(DataSource.getDataSource()));
+	boolean resultado = false;	
+
 	//updateNotaAlumnoCursada
 	   
    Iterator<AlumnoCursada> itAlumnos = alumnosConNotas.iterator();
@@ -132,7 +141,7 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
 		   
 		   AlumnoCursada a = itAlumnos.next();
 		   System.out.print(a.getDatosAlumno());
-		   daoAlumnoCursada.updateNotaAlumnoCursada(a);
+		   daoCursadas.updateNotaAlumnoCursada(a);
 		   resultado=true;
 	   }   
    }catch (Exception e) {
@@ -146,9 +155,8 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
 }
  
     public boolean cargaNotasFinales(int idDocente, int idMateria, List<AlumnoExamenFinal> alumnosConNotas){
-    	boolean resultado = false;
+    	boolean resultado = false;    	
     	
-    	AlumnosExamenFinalDao daoAlumnoExamen = new AlumnosExamenFinalDao(new JdbcTemplate(DataSource.getDataSource()));
     	//updateNotaAlumnoCursada
     	   
        Iterator<AlumnoExamenFinal> itAlumnos = alumnosConNotas.iterator();
@@ -158,7 +166,7 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
     		   
     		   AlumnoExamenFinal a = itAlumnos.next();
     		   System.out.print(a.getDatosAlumno());
-    		   daoAlumnoExamen.updateNotaAlumnoExamenFinal(a);
+    		   daoAlumnosExamenFinalDao.updateNotaAlumnoExamenFinal(a);
     		   resultado=true;
     	   }   
        }catch (Exception e) {

@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -19,20 +20,22 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.docentes.jaxws.repository.DataSource;
 import com.docentes.model.Materia;
 
-@Repository
+@Service
+@Transactional
 public class MateriasDao {
 
     private static final Logger logger = LogManager.getLogger(MateriasDao.class);
 
-    private final JdbcTemplate jdbcTemplate;
+    
+    private JdbcTemplate jdbcTemplate= new JdbcTemplate(DataSource.getDataSource());
 
-    public MateriasDao(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
+    
     public List<Materia> findAllPureJdbc() {
         List<Materia> results = new LinkedList<Materia>();
         Connection connection = null;

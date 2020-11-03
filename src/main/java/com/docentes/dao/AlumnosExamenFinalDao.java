@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -19,20 +20,21 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.docentes.jaxws.repository.DataSource;
 import com.docentes.model.AlumnoExamenFinal;
 
-@Repository
+@Service
+@Transactional
 public class AlumnosExamenFinalDao {
 
     private static final Logger logger = LogManager.getLogger(AlumnosExamenFinalDao.class);
 
-    private final JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate= new JdbcTemplate(DataSource.getDataSource());
 
-    public AlumnosExamenFinalDao(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
+    
     public List<AlumnoExamenFinal> findAllPureJdbc() {
         List<AlumnoExamenFinal> results = new LinkedList<AlumnoExamenFinal>();
         Connection connection = null;

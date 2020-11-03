@@ -3,6 +3,7 @@ package com.docentes.jaxws.client;
 import javax.xml.ws.Endpoint;
 
 public class DocentesServicePublisher {
+
     public static void main(String[] args) {
     	 
     	/* PARA SUBOIR VA ASI*/
