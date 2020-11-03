@@ -88,7 +88,7 @@ public class AlumnosCursadaDao {
     
     public List<AlumnoCursada> findByPorDocenteYMateria(int idDocente, int idMateria) {
     	
-	   String SQL_QUERY ="SELECT idalumnosCursada,datosAlumno,notaCursada, alumnoscursada.MateriasIdMaterias  FROM inscripciones.alumnoscursada " + 
+	   String SQL_QUERY ="SELECT idalumnosCursada,datosAlumno,notaCursada, alumnoscursada.MateriasIdMaterias  FROM alumnoscursada " + 
     		   		"inner join curso on alumnoscursada.MateriasIdMaterias = curso.MateriasIdMaterias " + 
     		   		"where alumnoscursada.MateriasIdMaterias = ? and JSON_UNQUOTE(datosDocente->\"$.id\") = ? " ;
     	
