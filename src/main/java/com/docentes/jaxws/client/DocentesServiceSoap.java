@@ -9,6 +9,9 @@ import com.docentes.model.AlumnoCursada;
 import com.docentes.model.AlumnoExamenFinal;
 import com.docentes.model.Materia;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin(origins = "*", maxAge = 3600)
 @WebService
 public interface DocentesServiceSoap {
 	
