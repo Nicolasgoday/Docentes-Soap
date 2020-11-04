@@ -1,4 +1,5 @@
 com\docentes\dao\MateriasDao.class
+com\docentes\jaxws\client\CORSFilter.class
 com\docentes\dao\AlumnosExamenFinalDao$AlumnoExamenFinalRowMapper.class
 com\docentes\jaxws\client\DocentesServicePublisher.class
 com\docentes\dao\AlumnosCursadaDao$AlumnoCursadaRowMapper.class

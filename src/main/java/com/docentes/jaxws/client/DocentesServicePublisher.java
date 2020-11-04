@@ -30,6 +30,8 @@ public class DocentesServicePublisher {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity request = new HttpEntity(headers);
+        
+      
 
         request.getBody();
         System.out.println(request.getBody());

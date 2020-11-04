@@ -304,6 +304,7 @@
                     </transformer>
                 </transformers>
                 <filters>
+                
                     <filter>
                         <artifact>*:*</artifact>
                         <excludes>
