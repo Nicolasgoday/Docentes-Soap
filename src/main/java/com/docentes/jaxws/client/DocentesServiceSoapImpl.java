@@ -5,14 +5,15 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.xml.ws.BindingType;
 
 import com.docentes.jaxws.repository.DocenteRepositoryImpl;
 import com.docentes.model.AlumnoCursada;
 import com.docentes.model.AlumnoExamenFinal;
 import com.docentes.model.Materia;
 
-
 @WebService(endpointInterface = "com.docentes.jaxws.client.DocentesServiceSoap")
+@BindingType(javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING) 
 public class DocentesServiceSoapImpl {
 	 @Inject 
     private DocenteRepositoryImpl docenteRepositoryImpl;
