@@ -44,7 +44,7 @@ public List<Materia> traerMaterias(int idDocente){
 		}   
 	   
 	 /*  
-	   String SQL_QUERY = "SELECT * FROM inscripciones.materias inner join curso on materias.idMaterias = curso.MateriasIdMaterias where JSON_UNQUOTE(datosDocente->\"$.id\") = " + idDocente +" ;";
+	   String SQL_QUERY = "SELECT * FROM materias inner join curso on materias.idMaterias = curso.MateriasIdMaterias where JSON_UNQUOTE(datosDocente->\"$.id\") = " + idDocente +" ;";
 	   
        List<Materia> listaMat = null;
        try (Connection con = DataSource.getConnection();
@@ -89,7 +89,7 @@ public List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria
 	}   
 	
 	   
-	String SQL_QUERY ="SELECT idalumnosCursada,datosAlumno,notaCursada, alumnoscursada.MateriasIdMaterias  FROM inscripciones.alumnoscursada " + 
+	String SQL_QUERY ="SELECT idalumnosCursada,datosAlumno,notaCursada, alumnoscursada.MateriasIdMaterias  FROM alumnoscursada " + 
 	   		"inner join curso on alumnoscursada.MateriasIdMaterias = curso.MateriasIdMaterias " + 
 	   		"where alumnoscursada.MateriasIdMaterias = " + idMateria  + " and JSON_UNQUOTE(datosDocente->\"$.id\") = "+ idDocente + " ;" ;
 	   
