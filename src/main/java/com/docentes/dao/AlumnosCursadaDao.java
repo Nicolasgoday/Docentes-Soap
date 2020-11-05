@@ -39,7 +39,7 @@ public class AlumnosCursadaDao {
         PreparedStatement preparedStatement = null;
         try {
             connection = jdbcTemplate.getDataSource().getConnection();
-            preparedStatement = connection.prepareStatement("SELECT * FROM AlumnoCursada");
+            preparedStatement = connection.prepareStatement("SELECT * FROM alumnoscursada");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
             	//idalumnosCursada, datosAlumno, notaCursada, MateriasIdMaterias, recordatorio, createdAt, updatedAt
@@ -73,16 +73,16 @@ public class AlumnosCursadaDao {
     }
 
     public List<AlumnoCursada> findAll() {
-        return jdbcTemplate.query("SELECT * FROM AlumnoCursada", new AlumnoCursadaRowMapper());
+        return jdbcTemplate.query("SELECT * FROM alumnoscursada", new AlumnoCursadaRowMapper());
     }
 
     public List<AlumnoCursada> findByName(String name) {
-        return jdbcTemplate.query("SELECT * FROM AlumnoCursada WHERE name LIKE ?", new Object[] { name },
+        return jdbcTemplate.query("SELECT * FROM alumnoscursada WHERE name LIKE ?", new Object[] { name },
                 new AlumnoCursadaRowMapper());
     }
 
     public AlumnoCursada findById(Long id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM AlumnoCursada WHERE idalumnosCursada = ?",
+        return jdbcTemplate.queryForObject("SELECT * FROM alumnoscursada WHERE idalumnosCursada = ?",
                 new Object[] { id }, new AlumnoCursadaRowMapper());
     }
     
@@ -98,11 +98,11 @@ public class AlumnosCursadaDao {
     }
 
     public int count() {
-        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM AlumnoCursada", Integer.class);
+        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM alumnoscursada", Integer.class);
     }
 
     public int deleteAll() {
-        return jdbcTemplate.update("DELETE from AlumnoCursada");
+        return jdbcTemplate.update("DELETE from alumnoscursada");
     }
 /*
     public void insertWithQuery(String name, int population) {
@@ -153,7 +153,7 @@ public class AlumnosCursadaDao {
 //update alumnoscursada set notaCursada = 1 where idalumnosCursada = 10 
     	 
 	 int[] types = {Types.VARCHAR, Types.BIGINT};    	  
-	 return jdbcTemplate.update("UPDATE AlumnosCursada  SET notaCursada = ? where idalumnosCursada = ?",
+	 return jdbcTemplate.update("UPDATE alumnoscursada  SET notaCursada = ? where idalumnosCursada = ?",
     			  new Object[]{ alumnoCursada.getNotaCursada(), alumnoCursada.getIdalumnosCursada()}, types);
     }
     

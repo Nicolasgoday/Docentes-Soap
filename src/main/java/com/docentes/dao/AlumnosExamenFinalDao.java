@@ -39,7 +39,7 @@ public class AlumnosExamenFinalDao {
         PreparedStatement preparedStatement = null;
         try {
             connection = jdbcTemplate.getDataSource().getConnection();
-            preparedStatement = connection.prepareStatement("SELECT * FROM AlumnoExamenFinal");
+            preparedStatement = connection.prepareStatement("SELECT * FROM alumnosexamenfinal");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
             	//idInscriptosExamen, ExamenesidExamenes, datosAlumno, nota, asistencia, recordatorio, createdAt, updatedAt
@@ -73,25 +73,25 @@ public class AlumnosExamenFinalDao {
     }
 
     public List<AlumnoExamenFinal> findAll() {
-        return jdbcTemplate.query("SELECT * FROM AlumnoExamenFinal", new AlumnoExamenFinalRowMapper());
+        return jdbcTemplate.query("SELECT * FROM alumnosexamenfinal", new AlumnoExamenFinalRowMapper());
     }
 
     public List<AlumnoExamenFinal> findByName(String name) {
-        return jdbcTemplate.query("SELECT * FROM AlumnoExamenFinal WHERE name LIKE ?", new Object[] { name },
+        return jdbcTemplate.query("SELECT * FROM alumnosexamenfinal WHERE name LIKE ?", new Object[] { name },
                 new AlumnoExamenFinalRowMapper());
     }
 
     public AlumnoExamenFinal findById(Long id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM AlumnoExamenFinal WHERE idInscriptosExamen = ?",
+        return jdbcTemplate.queryForObject("SELECT * FROM alumnosexamenfinal WHERE idInscriptosExamen = ?",
                 new Object[] { id }, new AlumnoExamenFinalRowMapper());
     }
 
     public int count() {
-        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM AlumnoExamenFinal", Integer.class);
+        return jdbcTemplate.queryForObject("SELECT COUNT(*) FROM alumnosexamenfinal", Integer.class);
     }
 
     public int deleteAll() {
-        return jdbcTemplate.update("DELETE from AlumnoExamenFinal");
+        return jdbcTemplate.update("DELETE from alumnosexamenfinal");
     }
 /*
     public void insertWithQuery(String name, int population) {
