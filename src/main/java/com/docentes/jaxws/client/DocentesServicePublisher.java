@@ -37,11 +37,10 @@ public class DocentesServicePublisher {
 
         System.out.print(System.getenv("JDBC_DATABASE_URL"));
          String uri = "/docentesSoap";
-         /*Endpoint.publish(host + ":" + port + uri ,
-                 new DocentesServiceSoapImpl());*/
+         Endpoint.publish(host + ":" + port + uri ,
+                 new DocentesServiceSoapImpl());
                  
-                 Endpoint endpoint = Endpoint.create("http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/", new DocentesServiceSoapImpl()); 
-                 endpoint.publish(host + ":" + port + uri ); 
+                
 
 
     }
