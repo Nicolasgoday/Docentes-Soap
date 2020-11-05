@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/jee-7-1.0-SNAPSHOT.jar
+web: java $JAVA_OPTS -jar target/soapdocentes-0.0.1.jar

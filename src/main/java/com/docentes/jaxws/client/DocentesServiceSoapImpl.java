@@ -13,7 +13,6 @@ import com.docentes.model.AlumnoExamenFinal;
 import com.docentes.model.Materia;
 
 @WebService(endpointInterface = "com.docentes.jaxws.client.DocentesServiceSoap")
-@BindingType(javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING) 
 public class DocentesServiceSoapImpl {
 	 @Inject 
     private DocenteRepositoryImpl docenteRepositoryImpl;
