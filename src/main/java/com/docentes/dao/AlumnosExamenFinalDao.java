@@ -20,6 +20,8 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
+import com.docentes.dao.AlumnosCursadaDao.AlumnoCursadaRowMapper;
+import com.docentes.model.AlumnoCursada;
 import com.docentes.model.AlumnoExamenFinal;
 
 @Repository
@@ -146,5 +148,14 @@ public class AlumnosExamenFinalDao {
     			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getIdInscriptosExamen()}, types);
     }
     
-
+    public List<AlumnoExamenFinal> findByPorDocenteYMateria(int idDocente, int idMateria) {
+    	
+    	String SQL_QUERY ="SELECT idInscriptosExamen,datosAlumno,nota, examenes.MateriasIdMaterias FROM alumnosexamenfinal " + 
+ 		   		"inner join examenes on alumnosexamenfinal.ExamenesidExamenes =  examenes.idExamenes " + 
+ 		   		"where examenes.MateriasIdMaterias = ? and JSON_UNQUOTE(docenteAsignado->\"$.id\") = ? " ;
+     	
+ 	   System.out.print(SQL_QUERY);
+        return jdbcTemplate.query(SQL_QUERY,
+                 new Object[] { idMateria, idDocente }, new AlumnoExamenFinalRowMapper());
+     }
 }

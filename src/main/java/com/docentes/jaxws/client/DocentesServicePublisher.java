@@ -15,18 +15,15 @@ public class DocentesServicePublisher {
     	
     	String port = System.getenv("PORT");
         String host = System.getenv("HOST_SOAP"); //"http://0.0.0.0:";
+        
         /* *********************************/
-    	/* PARA local VA ASI
-    	String port = "8080";
-         String host = "http://localhost:";
-        */ 
+    	// PARA local VA ASI
+        /*
+    	String port = "8081";
+         String host = "http://localhost";
+         */
     	
-       // String uri = "/employeeservice";
-           //"http://0.0.0.0:8080/employeeservice", Endpoint.publish(, service);
-        //Endpoint.publish("http://0.0.0.0:8080/employeeservice",
-//       Endpoint.publish(host + port + uri ,
-  //        new EmployeeServiceImpl());
-         
+         /*
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity request = new HttpEntity(headers);
@@ -36,11 +33,10 @@ public class DocentesServicePublisher {
         System.out.println(request.getBody());
 
         System.out.print(System.getenv("JDBC_DATABASE_URL"));
+        */
          String uri = "/docentesSoap";
          Endpoint.publish(host + ":" + port + uri ,
-                 new DocentesServiceSoapImpl());
-                 
-                
+                 new DocentesServiceSoapImpl());                              
 
 
     }

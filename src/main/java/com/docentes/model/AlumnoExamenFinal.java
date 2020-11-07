@@ -13,6 +13,8 @@ public class AlumnoExamenFinal {
 	private Date createdAt;
 	private Date updatedAt;	
 	
+	private int MateriasIdMaterias;
+	
 	public AlumnoExamenFinal(int idInscriptosExamen, String datosAlumno, int nota, int asistencia,
 			int examenesidExamenes, int recordatorio, Date createdAt, Date updatedAt) {
 		super();
@@ -127,6 +129,18 @@ public class AlumnoExamenFinal {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+
+
+	public int getMateriasIdMaterias() {
+		return MateriasIdMaterias;
+	}
+
+
+
+	public void setMateriasIdMaterias(int materiasIdMaterias) {
+		MateriasIdMaterias = materiasIdMaterias;
 	}
 		
 }

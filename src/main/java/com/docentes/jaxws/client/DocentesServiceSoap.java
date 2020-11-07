@@ -15,12 +15,15 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @WebService
 public interface DocentesServiceSoap {
 	
-	  @WebMethod
+	@WebMethod
     List<Materia> traerMaterias(int idDocente);
 	 
 	@WebMethod
 	List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria);
-	 
+	
+	@WebMethod
+	List<AlumnoExamenFinal> traerAlumnosPorMateriaExamen(int idDocente, int idMateria);
+	
     @WebMethod
     boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursada> alumnosConNotas);
  

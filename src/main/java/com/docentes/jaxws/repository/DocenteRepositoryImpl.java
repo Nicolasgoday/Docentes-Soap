@@ -179,4 +179,56 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
     
     }
 
+	public List<AlumnoExamenFinal> traerAlumnosPorMateriaExamen(int idDocente, int idMateria) {
+		//idalumnosCursada, datosAlumno, notaCursada, MateriasIdMaterias, recordatorio, createdAt, updatedAt
+/*
+	   AlumnosExamenFinalDao daoFinales= new AlumnosExamenFinalDao(this.jdbcTemplate);
+		   
+	   List<AlumnoExamenFinal> listaFinales = null;
+	   try {
+		   listaFinales = daoFinales.findByPorDocenteYMateria(idDocente, idMateria);
+		   System.out.print(listaFinales.get(0).getDatosAlumno());
+	   } catch (Exception e) {
+			// TODO Auto-generated catch block
+		   e.printStackTrace();
+		   System.out.print(e.getMessage());
+		
+	   }
+	   return listaFinales;
+
+	}*/
+		String SQL_QUERY ="SELECT idInscriptosExamen,datosAlumno,nota, examenes.MateriasIdMaterias FROM alumnosexamenfinal " + 
+ 		   		"inner join examenes on alumnosexamenfinal.ExamenesidExamenes =  examenes.idExamenes " + 
+ 		   		"where examenes.MateriasIdMaterias =  " + idMateria  + " and JSON_UNQUOTE(docenteAsignado->\"$.id\") = "+ idDocente + " ;" ;
+		  System.out.print(SQL_QUERY);
+		   
+	       List<AlumnoExamenFinal> listaAlumno = null;
+	       try (Connection con = DataSource.getConnection();
+	           PreparedStatement pst = con.prepareStatement( SQL_QUERY );
+	           ResultSet rs = pst.executeQuery();) {
+	    	   listaAlumno = new ArrayList<>();
+	    	   AlumnoExamenFinal a;
+	               while ( rs.next() ) {
+	                   a = new AlumnoExamenFinal();
+	                   a.setIdInscriptosExamen(rs.getInt( 1 ) );
+	                   a.setDatosAlumno(rs.getNString( 2 ) );
+	                   a.setNota(rs.getInt( 3 ) );
+	                   a.setMateriasIdMaterias(rs.getInt( 4 ) );                   
+	                   
+	                   listaAlumno.add( a );
+	                   
+	                   System.out.print("Alumno ->" + a.getDatosAlumno());
+	               }
+	               
+	               
+	               //CIERRO CONEXION
+	         //      DataSource.closeConnection();
+	               
+	   	} catch (SQLException e) {
+				// TODO Auto-generated catch block
+					e.printStackTrace();
+				}      	   
+			   
+			return listaAlumno;
+	}
 }

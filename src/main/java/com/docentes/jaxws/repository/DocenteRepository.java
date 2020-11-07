@@ -14,6 +14,8 @@ public interface DocenteRepository {
    List<Materia> traerMaterias(int idDocente);
 
 	List<AlumnoCursada> listadoAlumnosPorMateria(int idDocente, int idMateria);
+	
+	List<AlumnoExamenFinal> traerAlumnosPorMateriaExamen(int idDocente, int idMateria);
 
     boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursada> alumnosConNotas);
  

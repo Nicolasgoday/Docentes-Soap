@@ -139,7 +139,7 @@ public class AlumnosCursadaDao {
         return simpleJdbcCall.executeFunction(Integer.class, in);
     }
 
-    private static class AlumnoCursadaRowMapper implements RowMapper<AlumnoCursada> {
+    public static class AlumnoCursadaRowMapper implements RowMapper<AlumnoCursada> {
         @Override
         public AlumnoCursada mapRow(ResultSet resultSet, int rowNum) throws SQLException {
             return new AlumnoCursada(resultSet.getInt("idalumnosCursada"), resultSet.getString("datosAlumno"),

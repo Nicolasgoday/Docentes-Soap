@@ -87,7 +87,7 @@ public class MateriasDao {
     public List<Materia> findByDocente(int idDocente) {
     	String SQL_QUERY = "SELECT * FROM materias inner join curso on materias.idMaterias = curso.MateriasIdMaterias " + 
     	 "where JSON_UNQUOTE(datosDocente->\"$.id\") = ? ;";
-    	System.out.print(SQL_QUERY);
+    	System.out.print(SQL_QUERY + idDocente );
     	
         return jdbcTemplate.query(SQL_QUERY, new Object[] { idDocente },
                 new MateriaRowMapper());

@@ -8,6 +8,7 @@ com\docentes\dao\AlumnosExamenFinalDao$1.class
 com\docentes\jaxws\client\DocentesServiceSoapImpl.class
 com\docentes\jaxws\client\DocentesServiceSoap.class
 com\docentes\jaxws\repository\DocenteRepositoryImpl.class
+com\docentes\util\Autentificador.class
 com\docentes\model\AlumnoExamenFinal.class
 com\docentes\dao\AlumnosExamenFinalDao.class
 com\docentes\jaxws\repository\DocenteRepository.class
@@ -17,5 +18,4 @@ com\docentes\util\JWTAuthorizationFilter.class
 com\docentes\dao\MateriasDao$1.class
 com\docentes\model\AlumnoCursada.class
 com\docentes\model\Materia.class
-com\docentes\dao\AlumnosCursadaDao$1.class
 com\docentes\dao\AlumnosCursadaDao.class
