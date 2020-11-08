@@ -129,7 +129,7 @@ public class AlumnosExamenFinalDao {
     //UPDATE NOTA
     public int updateNotaAlumnoExamenFinal(AlumnoExamenFinal AlumnoExamenFinal) {
 
-	 int[] types = {Types.INTEGER, Types.BIGINT};    	  
+	 int[] types = {Types.INTEGER,Types.TINYINT, Types.BIGINT};    	  
 	 return jdbcTemplate.update("UPDATE alumnosexamenfinal  SET nota = ? , SET asistencia = ? where idInscriptosExamen = ?",
     			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getAsistencia(), AlumnoExamenFinal.getIdInscriptosExamen() }, types);
     }
