@@ -131,7 +131,7 @@ public class AlumnosExamenFinalDao {
 
 	 int[] types = {Types.INTEGER, Types.BIGINT};    	  
 	 return jdbcTemplate.update("UPDATE alumnosexamenfinal  SET nota = ? , SET asistencia = ? where idInscriptosExamen = ?",
-    			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getIdInscriptosExamen() , AlumnoExamenFinal.getAsistencia()}, types);
+    			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getAsistencia(), AlumnoExamenFinal.getIdInscriptosExamen() }, types);
     }
     
     public List<AlumnoExamenFinal> findByPorDocenteYMateria(int idDocente, int idMateria) {
