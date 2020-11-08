@@ -165,6 +165,7 @@ public boolean cargaNotasCursada(int idDocente, int idMateria, List<AlumnoCursad
     	   while (itAlumnos.hasNext()) {
     		   
     		   AlumnoExamenFinal a = itAlumnos.next();
+    		   a.setAsistencia(1);  //SI TENGO NOTA ENTONCES ASISTIO
     		   System.out.print(a.getDatosAlumno());
     		   daoAlumnoExamen.updateNotaAlumnoExamenFinal(a);
     		   resultado=true;

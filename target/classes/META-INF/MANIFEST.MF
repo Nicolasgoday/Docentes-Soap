@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Built-By: usuario
+Class-Path: jjwt-0.9.1.jar jackson-databind-2.9.6.jar jackson-annotati
+ ons-2.9.0.jar jackson-core-2.9.6.jar HikariCP-3.1.0.jar logback-class
+ ic-1.2.3.jar logback-core-1.2.3.jar slf4j-api-1.7.30.jar mysql-connec
+ tor-java-8.0.22.jar protobuf-java-3.11.4.jar log4j-1.2-api-2.11.0.jar
+  log4j-api-2.11.0.jar log4j-core-2.11.0.jar guava-18.0.jar httpclient
+ -4.5.jar httpcore-4.4.1.jar commons-logging-1.2.jar commons-codec-1.9
+ .jar jsf-api-2.2.14.jar jsf-impl-2.2.14.jar standard-1.1.2.jar javax.
+ mvc-api-20160715.jar ozark-20160715.jar spring-security-web-4.2.3.REL
+ EASE.jar aopalliance-1.0.jar spring-security-core-4.2.3.RELEASE.jar s
+ pring-beans-4.3.9.RELEASE.jar spring-core-4.3.9.RELEASE.jar spring-ex
+ pression-4.3.9.RELEASE.jar spring-web-4.3.9.RELEASE.jar spring-contex
+ t-4.3.19.RELEASE.jar spring-aop-4.3.19.RELEASE.jar spring-tx-4.3.19.R
+ ELEASE.jar spring-jdbc-4.3.19.RELEASE.jar spring-security-config-4.2.
+ 3.RELEASE.jar spring-security-taglibs-4.2.3.RELEASE.jar spring-securi
+ ty-acl-4.2.3.RELEASE.jar jboss-batch-api_1.0_spec-1.0.0.Final.jar jav
+ ax.inject-1.jar cdi-api-1.1.jar el-api-2.2.jar jboss-interceptors-api
+ _1.1_spec-1.0.0.Beta1.jar jsr250-api-1.0.jar jberet-core-1.0.2.Final.
+ jar jberet-support-1.0.2.Final.jar jboss-transaction-api_1.2_spec-1.0
+ .0.Final.jar jboss-marshalling-1.4.2.Final.jar weld-core-2.1.1.Final.
+ jar weld-core-impl-2.1.1.Final.jar weld-api-2.1.Final.jar weld-spi-2.
+ 1.Final.jar jboss-classfilewriter-1.0.4.Final.jar jboss-annotations-a
+ pi_1.2_spec-1.0.0.Alpha1.jar jboss-el-api_3.0_spec-1.0.0.Alpha1.jar j
+ boss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar weld-core-jsf-2.1.1.F
+ inal.jar weld-se-2.1.1.Final.jar jberet-se-1.0.2.Final.jar jersey-con
+ tainer-jetty-servlet-2.22.1.jar jersey-container-servlet-2.22.1.jar j
+ ersey-container-servlet-core-2.22.1.jar jersey-container-jetty-http-2
+ .22.1.jar javax.inject-2.4.0-b31.jar jetty-server-9.1.1.v20140108.jar
+  javax.servlet-api-3.1.0.jar jetty-http-9.1.1.v20140108.jar jetty-io-
+ 9.1.1.v20140108.jar jetty-util-9.1.1.v20140108.jar jetty-continuation
+ -9.1.1.v20140108.jar jetty-webapp-9.1.1.v20140108.jar jetty-xml-9.1.1
+ .v20140108.jar jetty-servlet-9.1.1.v20140108.jar jetty-security-9.1.1
+ .v20140108.jar jersey-common-2.22.1.jar javax.annotation-api-1.2.jar 
+ jersey-guava-2.22.1.jar hk2-api-2.4.0-b31.jar hk2-utils-2.4.0-b31.jar
+  aopalliance-repackaged-2.4.0-b31.jar hk2-locator-2.4.0-b31.jar javas
+ sist-3.18.1-GA.jar osgi-resource-locator-1.0.1.jar jersey-server-2.22
+ .1.jar jersey-client-2.22.1.jar jersey-media-jaxb-2.22.1.jar validati
+ on-api-1.1.0.Final.jar javax.ws.rs-api-2.0.1.jar jboss-logging-3.1.4.
+ GA.jar
+Build-Jdk: 1.8.0_191
+Created-By: Maven Integration for Eclipse
+Main-Class: com.docentes.jaxws.client.DocentesServicePublisher
+

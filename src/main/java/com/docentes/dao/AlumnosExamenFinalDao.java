@@ -95,21 +95,7 @@ public class AlumnosExamenFinalDao {
     public int deleteAll() {
         return jdbcTemplate.update("DELETE from alumnosexamenfinal");
     }
-/*
-    public void insertWithQuery(String name, int population) {
-        jdbcTemplate.update("INSERT INTO AlumnoExamenFinal (name, population) VALUES(?,?)", name, population);
-    }
 
-    public long insert(String name, int population) {
-        SimpleJdbcInsert simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate.getDataSource())
-                .withTableName("AlumnoExamenFinal").usingGeneratedKeyColumns("id");
-
-        Map<String, Object> parameters = new HashMap<String, Object>();
-        parameters.put("name", name);
-        parameters.put("population", population);
-        return simpleJdbcInsert.executeAndReturnKey(parameters).longValue();
-    }
-*/
 
     public Integer callProcedure(String name) {
         SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate)
@@ -144,8 +130,8 @@ public class AlumnosExamenFinalDao {
     public int updateNotaAlumnoExamenFinal(AlumnoExamenFinal AlumnoExamenFinal) {
 
 	 int[] types = {Types.INTEGER, Types.BIGINT};    	  
-	 return jdbcTemplate.update("UPDATE alumnosexamenfinal  SET nota = ? where idInscriptosExamen = ?",
-    			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getIdInscriptosExamen()}, types);
+	 return jdbcTemplate.update("UPDATE alumnosexamenfinal  SET nota = ? , SET asistencia = ? where idInscriptosExamen = ?",
+    			  new Object[]{ AlumnoExamenFinal.getNota(), AlumnoExamenFinal.getIdInscriptosExamen() , AlumnoExamenFinal.getAsistencia()}, types);
     }
     
     public List<AlumnoExamenFinal> findByPorDocenteYMateria(int idDocente, int idMateria) {
