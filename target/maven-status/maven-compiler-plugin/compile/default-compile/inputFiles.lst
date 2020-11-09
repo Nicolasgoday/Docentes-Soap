@@ -1,16 +1,16 @@
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\client\DocentesServiceSoap.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\dao\ApplicationContext.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\util\Autentificador.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\util\JWTAuthorizationFilter.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\dao\MateriasDao.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\client\CORSFilter.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\dao\AlumnosCursadaDao.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\client\DocentesServiceSoapImpl.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\model\AlumnoExamenFinal.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\repository\DocenteRepository.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\client\DocentesServicePublisher.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\dao\AlumnosExamenFinalDao.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\model\AlumnoCursada.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\repository\DataSource.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\model\Materia.java
-C:\Users\usuario\Documents\GitHub\jee-7\src\main\java\com\docentes\jaxws\repository\DocenteRepositoryImpl.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\model\AlumnoCursada.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\dao\AlumnosCursadaDao.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\repository\DataSource.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\client\DocentesServiceSoapImpl.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\dao\AlumnosExamenFinalDao.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\dao\ApplicationContext.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\client\DocentesServicePublisher.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\model\AlumnoExamenFinal.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\util\JWTAuthorizationFilter.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\client\CORSFilter.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\repository\DocenteRepositoryImpl.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\repository\DocenteRepository.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\jaxws\client\DocentesServiceSoap.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\model\Materia.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\dao\MateriasDao.java
+C:\Users\Max\Documents\UNLA\Sistemas Distribuidos\SIU\Docentes-Soap\src\main\java\com\docentes\util\Autentificador.java
