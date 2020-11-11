@@ -15,3 +15,12 @@ java -jar target/jee-7-1.0-SNAPSHOT.jar
  http://docentes-soap-api.herokuapp.com:8080/employeeservice?wsdl
  
  
+## Docker Compose:
+
+1. Generar jar:
+
+         mvn clean install -DskipTests
+
+2. Correr:
+
+         docker-compose up -d
